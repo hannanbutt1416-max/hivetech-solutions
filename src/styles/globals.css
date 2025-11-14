@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Space+Mono:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional Yellow-Black-Grey-White Color System */
+    --bg-primary: #FFFFFF;
+    --bg-surface: #F5F5F5;
+    --bg-dark: #1A1A1A;
+    --bg-dark-medium: #2D2D2D;
+    
+    --accent-yellow: #FFD700;
+    --accent-yellow-bright: #FFC000;
+    --accent-black: #000000;
+    --accent-grey: #808080;
+    --accent-grey-light: #D3D3D3;
+    
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-muted: #808080;
+    --text-on-dark: #FFFFFF;
+    --text-yellow: #FFD700;
+    
+    --border-base: #E0E0E0;
+    --border-hover: #FFD700;
+    --border-dark: #2D2D2D;
+    
+    --shadow-surface: rgba(0, 0, 0, 0.1);
+    --shadow-yellow: rgba(255, 215, 0, 0.4);
+    
+    --error: #FF3B3B;
+    --warning: #FFC300;
+    --success: #10B981;
+    
+    --radius: 8px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-secondary)];
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[var(--text-primary)];
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 2.625rem; /* 42px - was 56px (75%) */
+    line-height: 1.1;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 1.875rem; /* 30px - was 40px (75%) */
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.406rem; /* 22.5px - was 30px (75%) */
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.125rem; /* 18px - was 24px (75%) */
+    line-height: 1.4;
+  }
+
+  p {
+    line-height: 1.7;
+    font-size: 0.938rem; /* 15px - was 16px (~94% for readability) */
+  }
+
+  .data-font {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+  }
+
+  /* Modern Grid Pattern */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Animated Mesh Gradient */
+  .mesh-gradient {
+    background: 
+      radial-gradient(at 0% 0%, rgba(255, 215, 0, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(0, 0, 0, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(255, 215, 0, 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(45, 45, 45, 0.15) 0px, transparent 50%);
+  }
+
+  /* Yellow Glow Effects */
+  .glow-yellow {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5), 0 0 50px rgba(255, 215, 0, 0.25);
+  }
+
+  .glow-yellow-strong {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7), 0 0 60px rgba(255, 215, 0, 0.4);
+  }
+
+  .glow-yellow-border {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5), inset 0 0 10px rgba(255, 215, 0, 0.08);
+  }
+
+  .glow-dark {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Card hover effect */
+  .card-tech {
+    @apply bg-[var(--bg-surface)] rounded-lg border border-[var(--border-base)] transition-all duration-300;
+    box-shadow: 0 1px 3px var(--shadow-surface);
+  }
+
+  .card-tech:hover {
+    @apply border-[var(--accent-yellow)];
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 1px 3px var(--shadow-surface);
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-[var(--accent-yellow)];
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-[var(--bg-surface)];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #FFD700, #FFC000);
+    @apply rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FFC000;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient-yellow {
+    background: linear-gradient(135deg, #FFD700, #FFC000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-dark {
+    background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .clip-corner {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+
+  .bg-gradient-yellow {
+    background: linear-gradient(135deg, #FFD700, #FFC000);
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
+  }
+
+  .bg-gradient-gold-shine {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC000 50%, #FFD700 100%);
+    background-size: 200% 200%;
+    animation: shine 3s ease-in-out infinite;
+  }
+
+  @keyframes shine {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Swiper Custom Styles for Hero */
+  .swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition-property: transform;
+    box-sizing: content-box;
+  }
+
+  /* Cosmic Hero Swiper Specific Fixes */
+  .cosmic-hero-swiper {
+    overflow: hidden !important;
+  }
+
+  .cosmic-hero-swiper .swiper-wrapper {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .cosmic-hero-swiper .swiper-slide {
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    transition-property: transform, opacity !important;
+  }
+
+  /* Ensure smooth transitions on all browsers */
+  .swiper-parallax {
+    transition-property: transform, opacity;
+  }
+
+  /* Fix for browsers showing all slides in a row */
+  @supports (-webkit-overflow-scrolling: touch) {
+    .cosmic-hero-swiper .swiper-wrapper {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+  }
+
+  /* Prevent slides from displaying inline */
+  .cosmic-hero-swiper .swiper-slide {
+    display: flex !important;
+  }
+
+  /* Mobile Performance Optimizations */
+  @media (max-width: 768px) {
+    /* Disable expensive animations on mobile */
+    .mesh-gradient {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, transparent 100%);
+      animation: none !important;
+    }
+
+    /* Simplify glows on mobile */
+    .glow-yellow {
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    .glow-yellow-strong {
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .glow-yellow-border {
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+    }
+
+    .glow-dark {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Disable parallax on mobile */
+    [data-swiper-parallax] {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    /* Reduce animation complexity */
+    * {
+      animation-duration: 0.3s !important;
+      transition-duration: 0.2s !important;
+    }
+
+    /* Remove backdrop filters on low-end devices */
+    .backdrop-blur-xl,
+    .backdrop-blur-lg,
+    .backdrop-blur-md {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      background-color: rgba(255, 255, 255, 0.15) !important;
+    }
+  }
+
+  /* GPU Acceleration for smooth animations */
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  /* Optimize fixed elements */
+  [class*="fixed"],
+  [class*="sticky"] {
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  /* Smooth scroll performance */
+  * {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Optimize transforms */
+  [class*="motion"],
+  [class*="animate"] {
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Touch optimization */
+  button,
+  a,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: rgba(255, 215, 0, 0.2);
+    touch-action: manipulation;
+  }
+
+  /* Mobile Menu Optimizations */
+  @media (max-width: 768px) {
+    /* Ensure mobile menu is on top */
+    .fixed {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    /* Optimize mobile menu transitions */
+    [class*="mobile-menu"] {
+      will-change: transform;
+      transform: translateZ(0);
+    }
+
+    /* Prevent scrolling issues on mobile menu */
+    body.menu-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+  }
+
+  /* Ensure mobile menu and backdrop always appear on top globally */
+  .z-\[9998\],
+  .z-\[9999\] {
+    isolation: isolate;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}

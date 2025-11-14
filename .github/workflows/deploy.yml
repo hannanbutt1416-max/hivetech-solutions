@@ -1,0 +1,52 @@
+name: 🚀 Deploy to Hostinger (Hive Tech Solutions)
+
+on:
+  push:
+    branches:
+      - main  # change if your branch name is different
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout your code
+      - name: 🧩 Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Install dependencies
+      - name: 📦 Install Dependencies
+        run: npm install
+
+      # Step 3: Build Vite project
+      - name: 🏗️ Build Vite Project
+        run: npm run build
+
+      # Step 4: Copy .htaccess into dist/ (important fix!)
+      - name: ⚙️ Copy .htaccess to Build Folder
+        run: |
+          if [ -f "./public/.htaccess" ]; then
+            cp ./public/.htaccess ./dist/.htaccess
+            echo ".htaccess copied from public/ ✅"
+          elif [ -f "./.htaccess" ]; then
+            cp ./.htaccess ./dist/.htaccess
+            echo ".htaccess copied from root ✅"
+          else
+            echo "⚠️ No .htaccess found to copy!"
+          fi
+
+      # Step 5: Deploy to Hostinger via FTP
+      - name: 🚀 Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: 92.113.18.65
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          local-dir: dist/
+          server-dir: ./   # make sure this points to your correct folder
+          dangerous-clean-slate: true  # deletes old files before uploading
+
+      # Step 6: Confirmation
+      - name: ✅ Deployment Successful
+        run: echo "🎉 Deployment completed successfully to Hostinger!"
