@@ -155,7 +155,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-[#F5F5F5] border-2 border-[#E0E0E0] rounded-lg text-[#1A1A1A] placeholder:text-[#808080] focus:border-[#FFD700] focus:outline-none transition-colors"
-                      placeholder="+1 (234) 567-890"
+                      placeholder="+1 (817) 886-6699"
                     />
                   </div>
 

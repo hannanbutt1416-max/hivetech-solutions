@@ -138,7 +138,7 @@ export function Terms() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li>Email: <a href="mailto:legal@hivetechsolutions.com" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">legal@hivetechsolutions.com</a></li>
-                <li>Phone: <a href="tel:+15551234567" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">+1 (555) 123-4567</a></li>
+                <li>Phone: <a href="tel:+18178866699" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">(817) 886-6699</a></li>
                 <li>Address: 123 Tech Boulevard, San Francisco, CA 94105</li>
               </ul>
             </section>

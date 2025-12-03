@@ -72,7 +72,7 @@ export function Header() {
                 className="flex items-center gap-1.5 text-[#D3D3D3] hover:text-[#FFD700] transition-colors"
               >
                 <Phone className="w-3 h-3" />
-                <span className="hidden sm:inline">+1 (234) 567-890</span>
+                <span className="hidden sm:inline">+1 (817) 886-6699</span>
               </a>
               <a 
                 href="mailto:info@hivetechsolutions.com" 

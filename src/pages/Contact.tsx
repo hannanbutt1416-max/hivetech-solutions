@@ -47,8 +47,8 @@ export function Contact() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      value: '(817) 886-6699',
+      link: 'tel:+18178866699',
     },
     {
       icon: MapPin,

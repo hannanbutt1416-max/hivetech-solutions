@@ -110,7 +110,7 @@ export function Chatbot() {
     };
 
     // Simple keyword matching for custom questions
-    let answer = "Thank you for your question! For detailed information, please contact us at info@hivetechsolutions.com or call +1 (234) 567-890. We'd be happy to assist you!";
+    let answer = "Thank you for your question! For detailed information, please contact us at info@hivetechsolutions.com or call +1 (817) 886-6699. We'd be happy to assist you!";
 
     const lowerInput = inputValue.toLowerCase();
     if (lowerInput.includes('service')) {

@@ -322,7 +322,7 @@ export function Demo() {
             <div className="card-tech p-8 bg-gradient-to-br from-[var(--accent-cyan)]/10 to-[var(--accent-lime)]/10 border-[var(--accent-cyan)]/30">
               <h3 className="mb-4">Prefer to Talk First?</h3>
               <p className="text-[var(--text-secondary)] mb-6 text-sm">
-                Give us a call at <a href="tel:+15551234567" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">+1 (555) 123-4567</a> or email us at <a href="mailto:hello@hivetechsolutions.com" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">hello@hivetechsolutions.com</a>
+                Give us a call at <a href="tel:+18178866699" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">(817) 886-6699</a> or email us at <a href="mailto:hello@hivetechsolutions.com" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">hello@hivetechsolutions.com</a>
               </p>
             </div>
           </motion.div>
