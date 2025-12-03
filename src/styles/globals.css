@@ -17,6 +17,10 @@
     --accent-black: #000000;
     --accent-grey: #808080;
     --accent-grey-light: #D3D3D3;
+    --accent-lime: #FFD700;
+    --accent-cyber-lime: #FFD700;
+    --accent-cyan: #FFD700;
+    --accent-blue: #FFD700;
     
     --text-primary: #1A1A1A;
     --text-secondary: #4A4A4A;
@@ -123,6 +127,10 @@
 
   .glow-dark {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .glow-lime {
+    box-shadow: 0 0 25px rgba(117, 255, 0, 0.5), 0 0 50px rgba(117, 255, 0, 0.25);
   }
 
   /* Card hover effect */
