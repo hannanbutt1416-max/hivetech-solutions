@@ -21,10 +21,10 @@ const defaultSEO = {
   phone: '+1-234-567-890',
   email: 'info@hivetechsolutions.com',
   address: {
-    street: '123 Tech Boulevard',
-    city: 'San Francisco',
-    state: 'CA',
-    zip: '94105',
+    street: '2833 Crockett Street Ste 1113',
+    city: 'Fort Worth',
+    state: 'TX',
+    zip: '76107',
     country: 'United States',
   },
   geo: {

@@ -272,9 +272,9 @@ export function Home() {
             </motion.div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 container mx-auto px-6">
-            <Marquee direction="up" speed={40} className="h-[700px]">
+            <Marquee direction="up" speed={80} className="h-[700px]" pauseOnHover={false}>
               {reviews.slice(0, 12).concat(reviews.slice(0, 12)).map((review, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-xl border-2 border-[#FFD700] mb-4 shadow-lg hover:shadow-xl transition-shadow">
+                <div key={idx} className="bg-white p-6 rounded-xl border-2 border-[#FFD700] shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex gap-1 mb-3">
                     {Array.from({ length: review.rating }).map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#FFD700] text-[#FFD700]" />
@@ -296,9 +296,9 @@ export function Home() {
                 </div>
               ))}
             </Marquee>
-            <Marquee direction="down" speed={45} className="h-[700px]">{/* MIDDLE COLUMN - moves DOWN (opposite) */}
+            <Marquee direction="down" speed={80} className="h-[700px]" pauseOnHover={false}>{/* MIDDLE COLUMN - moves DOWN (opposite) */}
               {reviews.slice(12, 24).concat(reviews.slice(12, 24)).map((review, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-xl border-2 border-[#FFD700] mb-4 shadow-lg hover:shadow-xl transition-shadow">
+                <div key={idx} className="bg-white p-6 rounded-xl border-2 border-[#FFD700] shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex gap-1 mb-3">
                     {Array.from({ length: review.rating }).map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#FFD700] text-[#FFD700]" />
@@ -320,9 +320,9 @@ export function Home() {
                 </div>
               ))}
             </Marquee>
-            <Marquee direction="up" speed={50} className="h-[700px]">
+            <Marquee direction="up" speed={80} className="h-[700px]" pauseOnHover={false}>
               {reviews.slice(24, 36).concat(reviews.slice(24, 36)).map((review, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-xl border-2 border-[#FFD700] mb-4 shadow-lg hover:shadow-xl transition-shadow">
+                <div key={idx} className="bg-white p-6 rounded-xl border-2 border-[#FFD700] shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex gap-1 mb-3">
                     {Array.from({ length: review.rating }).map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#FFD700] text-[#FFD700]" />

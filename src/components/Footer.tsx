@@ -90,9 +90,7 @@ export function Footer() {
             <p className="text-[#808080] text-sm">
               © {new Date().getFullYear()} Hive Tech Solutions. All rights reserved.
             </p>
-            <p className="text-[#808080] text-sm">
-              Built with ⚡ for algorithmic growth
-            </p>
+
           </div>
         </div>
       </div>

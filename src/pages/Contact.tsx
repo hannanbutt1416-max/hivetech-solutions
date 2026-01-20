@@ -53,7 +53,13 @@ export function Contact() {
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Tech Boulevard, San Francisco, CA 94105',
+      value: '2833 Crockett Street Ste 1113, Fort Worth, TX, USA',
+      link: null,
+    },
+    {
+      icon: MapPin,
+      label: 'Office Address',
+      value: '7838 Malton Lane, Appt 22, Worthington, Columbus, Ohio 43085',
       link: null,
     },
     {

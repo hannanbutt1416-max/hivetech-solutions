@@ -22,22 +22,26 @@ export function Marquee({
   return (
     <div className={`overflow-hidden ${className}`}>
       <motion.div
-        className={`flex ${isHorizontal ? 'flex-row' : 'flex-col'} gap-8`}
+        className={`flex ${isHorizontal ? 'flex-row' : 'flex-col'}`}
+        initial={{
+          [isHorizontal ? 'x' : 'y']: isReverse ? '-50%' : '0%',
+        }}
         animate={{
-          [isHorizontal ? 'x' : 'y']: isReverse ? [0, '50%'] : ['0%', '-50%'],
+          [isHorizontal ? 'x' : 'y']: isReverse ? '0%' : '-50%',
         }}
         transition={{
           duration: speed,
           repeat: Infinity,
           ease: 'linear',
+          repeatType: 'loop',
         }}
         whileHover={pauseOnHover ? { animationPlayState: 'paused' } : {}}
       >
         {/* Duplicate children for seamless loop */}
-        <div className={`flex ${isHorizontal ? 'flex-row' : 'flex-col'} gap-8`}>
+        <div className={`flex ${isHorizontal ? 'flex-row' : 'flex-col'}`}>
           {children}
         </div>
-        <div className={`flex ${isHorizontal ? 'flex-row' : 'flex-col'} gap-8`}>
+        <div className={`flex ${isHorizontal ? 'flex-row' : 'flex-col'}`}>
           {children}
         </div>
       </motion.div>

@@ -111,7 +111,8 @@ export function Privacy() {
               <ul className="mt-4 space-y-2">
                 <li>Email: <a href="mailto:privacy@hivetechsolutions.com" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">privacy@hivetechsolutions.com</a></li>
                 <li>Phone: <a href="tel:+18178866699" className="text-[var(--accent-cyan)] hover:text-[var(--accent-lime)]">+1 (817) 886-6699</a></li>
-                <li>Address: 123 Tech Boulevard, San Francisco, CA 94105</li>
+                <li>Address: 2833 Crockett Street Ste 1113, Fort Worth, TX, USA</li>
+                <li>Office Address: 7838 Malton Lane, Appt 22, Worthington, Columbus, Ohio 43085</li>
               </ul>
             </section>
           </div>
