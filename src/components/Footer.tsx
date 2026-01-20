@@ -35,18 +35,18 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#1A1A1A] border-t-4 border-[#FFD700] mt-32">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-12">
+      <footer className="bg-[#1A1A1A] border-t-4 border-[#FFD700] mt-24">
+        <div className="container mx-auto px-5 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-10">
           {/* Logo Section */}
           <div className="md:col-span-2">
             <Link to="/" className="inline-block mb-4">
-              <LogoImage className="h-12 w-auto" />
+                <LogoImage className="h-9 w-auto" />
             </Link>
-            <p className="text-[#D3D3D3] text-sm mb-6">
+              <p className="text-[#D3D3D3] text-xs mb-5">
               Algorithmic growth partner for local businesses. Premium Web Apps, Automated Workflows & Local SEO Excellence.
             </p>
-            <div className="flex gap-4">
+              <div className="flex gap-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -55,10 +55,10 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-[#2D2D2D] hover:bg-[#FFD700] text-[#D3D3D3] hover:text-[#1A1A1A] flex items-center justify-center rounded-lg transition-all duration-200 border border-[#FFD700]/30 hover:border-[#FFD700]"
+                      className="w-8 h-8 bg-[#2D2D2D] hover:bg-[#FFD700] text-[#D3D3D3] hover:text-[#1A1A1A] flex items-center justify-center rounded-lg transition-all duration-200 border border-[#FFD700]/30 hover:border-[#FFD700]"
                     aria-label={social.label}
                   >
-                    <Icon className="w-5 h-5" />
+                      <Icon className="w-4 h-4" />
                   </a>
                 );
               })}
@@ -68,13 +68,13 @@ export function Footer() {
           {/* Link Sections */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-[#FFD700] mb-4 font-semibold">{category}</h4>
-              <ul className="space-y-2">
+                <h4 className="text-[#FFD700] mb-3 font-semibold text-sm">{category}</h4>
+                <ul className="space-y-1.5">
                 {links.map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-[#D3D3D3] hover:text-[#FFD700] transition-colors duration-200 text-sm block"
+                        className="text-[#D3D3D3] hover:text-[#FFD700] transition-colors duration-200 text-xs block"
                     >
                       {link.label}
                     </Link>
@@ -85,9 +85,9 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="pt-8 border-t border-[#2D2D2D]">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-[#808080] text-sm">
+        <div className="pt-6 border-t border-[#2D2D2D]">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+            <p className="text-[#808080] text-xs">
               © {new Date().getFullYear()} Hive Tech Solutions. All rights reserved.
             </p>
 

@@ -159,21 +159,21 @@ export function Home() {
         <CosmicHero onConsultationClick={() => setIsConsultationModalOpen(true)} />
 
         {/* Client Marquee */}
-        <section className="py-9 bg-[#1A1A1A] border-y-2 border-[#FFD700]">
-          <div className="space-y-4">
+        <section className="py-7 bg-[#1A1A1A] border-y-2 border-[#FFD700]">
+          <div className="space-y-3">
             <Marquee speed={50} direction="left">
               {clients.slice(0, 3).map((client, idx) => (
-                <div key={idx} className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#2D2D2D] to-[#1A1A1A] rounded-lg border-2 border-[#FFD700] shadow-md mx-2">
-                  <span className="text-white font-semibold text-sm">{client.name}</span>
-                  <span className="data-font text-[#FFD700] text-base">{client.metric}</span>
+                <div key={idx} className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-[#2D2D2D] to-[#1A1A1A] rounded-lg border-2 border-[#FFD700] shadow-md mx-1.5">
+                  <span className="text-white font-semibold text-xs">{client.name}</span>
+                  <span className="data-font text-[#FFD700] text-sm">{client.metric}</span>
                 </div>
               ))}
             </Marquee>
             <Marquee speed={50} direction="right">
               {clients.slice(3, 6).map((client, idx) => (
-                <div key={idx} className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#1A1A1A] to-[#2D2D2D] rounded-lg border-2 border-[#FFD700] shadow-md mx-2">
-                  <span className="text-white font-semibold text-sm">{client.name}</span>
-                  <span className="data-font text-[#FFD700] text-base">{client.metric}</span>
+                <div key={idx} className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-[#1A1A1A] to-[#2D2D2D] rounded-lg border-2 border-[#FFD700] shadow-md mx-1.5">
+                  <span className="text-white font-semibold text-xs">{client.name}</span>
+                  <span className="data-font text-[#FFD700] text-sm">{client.metric}</span>
                 </div>
               ))}
             </Marquee>
@@ -181,23 +181,23 @@ export function Home() {
         </section>
 
         {/* Services */}
-        <section className="py-24 bg-white">
+        <section className="py-20 bg-white">
           <SectionContainer>
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-              <h2 className="mb-3">Our Core Services</h2>
-              <p className="text-lg text-[#4A4A4A]">Three pillars of digital transformation</p>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+              <h2 className="mb-2">Our Core Services</h2>
+              <p className="text-base text-[#4A4A4A]">Three pillars of digital transformation</p>
             </motion.div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-5">
               {services.map((service, idx) => {
                 const Icon = service.icon;
                 return (
                   <motion.div key={idx} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}>
-                    <Link to={service.link} className="block p-6 h-full bg-white border-2 border-[#E0E0E0] rounded-xl hover:border-[#FFD700] hover:shadow-xl transition-all duration-300 group">
-                      <motion.div className="w-12 h-12 mb-4 rounded-lg bg-gradient-to-br from-[#FFD700] to-[#FFC000] flex items-center justify-center shadow-lg" whileHover={{ rotate: 5, scale: 1.1 }}>
-                        <Icon className="w-6 h-6 text-[#1A1A1A]" />
+                    <Link to={service.link} className="block p-5 h-full bg-white border-2 border-[#E0E0E0] rounded-xl hover:border-[#FFD700] hover:shadow-xl transition-all duration-300 group">
+                      <motion.div className="w-10 h-10 mb-3 rounded-lg bg-gradient-to-br from-[#FFD700] to-[#FFC000] flex items-center justify-center shadow-lg" whileHover={{ rotate: 5, scale: 1.1 }}>
+                        <Icon className="w-5 h-5 text-[#1A1A1A]" />
                       </motion.div>
-                      <h3 className="mb-2">{service.title}</h3>
-                      <p className="text-[#4A4A4A] mb-4 text-sm">{service.description}</p>
+                      <h3 className="mb-1.5">{service.title}</h3>
+                      <p className="text-[#4A4A4A] mb-3 text-xs">{service.description}</p>
                       <span className="text-[#FFD700] group-hover:text-[#FFC000] transition-colors inline-flex items-center gap-2 font-semibold text-sm">
                         View Services <ArrowRight className="w-4 h-4" />
                       </span>

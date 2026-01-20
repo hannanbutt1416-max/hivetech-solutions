@@ -39,7 +39,7 @@
     --warning: #FFC300;
     --success: #10B981;
     
-    --radius: 8px;
+    --radius: 6px; /* 80% of 8px */
   }
 
   * {
@@ -48,6 +48,7 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 80%; /* Global 80% scale */
   }
 
   body {
@@ -64,30 +65,30 @@
   }
 
   h1 {
-    font-size: 2.625rem; /* 42px - was 56px (75%) */
+    font-size: 2.1rem; /* 33.6px - 80% of 42px */
     line-height: 1.1;
     font-weight: 800;
   }
 
   h2 {
-    font-size: 1.875rem; /* 30px - was 40px (75%) */
+    font-size: 1.5rem; /* 24px - 80% of 30px */
     line-height: 1.2;
     font-weight: 600;
   }
 
   h3 {
-    font-size: 1.406rem; /* 22.5px - was 30px (75%) */
+    font-size: 1.125rem; /* 18px - 80% of 22.5px */
     line-height: 1.3;
   }
 
   h4 {
-    font-size: 1.125rem; /* 18px - was 24px (75%) */
+    font-size: 0.9rem; /* 14.4px - 80% of 18px */
     line-height: 1.4;
   }
 
   p {
-    line-height: 1.7;
-    font-size: 0.938rem; /* 15px - was 16px (~94% for readability) */
+    line-height: 1.6;
+    font-size: 0.75rem; /* 12px - 80% of 15px */
   }
 
   .data-font {
@@ -100,7 +101,7 @@
     background-image: 
       linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
+    background-size: 40px 40px; /* 80% of 50px */
   }
 
   /* Animated Mesh Gradient */
@@ -114,23 +115,23 @@
 
   /* Yellow Glow Effects */
   .glow-yellow {
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5), 0 0 50px rgba(255, 215, 0, 0.25);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.25); /* 80% scale */
   }
 
   .glow-yellow-strong {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7), 0 0 60px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 24px rgba(255, 215, 0, 0.7), 0 0 48px rgba(255, 215, 0, 0.4); /* 80% scale */
   }
 
   .glow-yellow-border {
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5), inset 0 0 10px rgba(255, 215, 0, 0.08);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.5), inset 0 0 8px rgba(255, 215, 0, 0.08); /* 80% scale */
   }
 
   .glow-dark {
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.2); /* 80% scale */
   }
 
   .glow-lime {
-    box-shadow: 0 0 25px rgba(117, 255, 0, 0.5), 0 0 50px rgba(117, 255, 0, 0.25);
+    box-shadow: 0 0 20px rgba(117, 255, 0, 0.5), 0 0 40px rgba(117, 255, 0, 0.25); /* 80% scale */
   }
 
   /* Card hover effect */
@@ -151,7 +152,7 @@
 
   /* Scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px; /* 80% of 10px */
   }
 
   ::-webkit-scrollbar-track {
@@ -202,7 +203,7 @@
   }
 
   .clip-corner {
-    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 13px) 0, 100% 13px, 100% 100%, 0 100%); /* 80% of 16px */
   }
 
   .bg-gradient-yellow {
@@ -374,6 +375,12 @@
   textarea {
     -webkit-tap-highlight-color: rgba(255, 215, 0, 0.2);
     touch-action: manipulation;
+  }
+
+  /* 80% Scale Spacing Override - Apply to common utility classes */
+  .container {
+    padding-left: 1.2rem; /* 80% of 1.5rem (px-6) */
+    padding-right: 1.2rem;
   }
 
   /* Mobile Menu Optimizations */
